@@ -25,6 +25,9 @@ function contactsApi(app) {
         message: 'Contacts Listed'
       });
     } catch (err) {
+      res.json({
+        error: err
+      });
       next(err);
     }
   });

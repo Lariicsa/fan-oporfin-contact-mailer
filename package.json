@@ -1,12 +1,12 @@
 {
-  "name": "movies-api",
+  "name": "oporfin-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "DEBUG=app:* nodemon index",
     "start": "NODE_ENV=production node index",
-    "build": "movies-api build"
+    "build": "oporfin-api build"
   },
   "keywords": [],
   "author": "",
