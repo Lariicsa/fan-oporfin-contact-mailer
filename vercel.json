@@ -1,0 +1,30 @@
+{
+  "name": "platziapi",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "DB_USER": "@db_user",
+    "DB_PASS": "@db_pass",
+    "DB_HOST": "@db_host",
+    "DB_NAME": "@db_name",
+    "SMTP_EMAIL": "@smtp_email",
+    "SMTP_PAZZ": "@smtp_pazz",
+    "SMTP_FAN_USER": "@smtp_fan_user",
+    "SMTP_FAN_PAZZ": "@smtp_fan_pazz",
+    "SMTP_FAN_PORT": "@smtp_fan_port",
+    "SMTP_FAN_SECURE": "@smtp_fan_secure",
+    "SMTP_FAN_IGNORE_TLS": "@smtp_fan_ignoretls",
+    "SMTP_FAN_HOST": "@smtp_fan_host"
+  }
+}
