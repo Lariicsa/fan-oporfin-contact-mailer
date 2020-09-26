@@ -12,7 +12,7 @@ contactsApi(app);
 
 //middleware for CORS
 app.use(function (req, res, next) {
-	res.header("Access-Control-Allow-Origin", "https://oporfin-mailer.herokuapp.com/api")
+	res.header("Access-Control-Allow-Origin", "https://oporfinlanding.netlify.app")
 	res.header("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT")
 	next()
 })
