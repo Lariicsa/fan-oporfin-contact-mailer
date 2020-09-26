@@ -22,7 +22,7 @@
     }
   ],
   "env": {
-    "DB_USER": "@db_user",
+    "DB_USER": "lara",
     "DB_PASS": "@db_pass",
     "DB_HOST": "@db_host",
     "DB_NAME": "@db_name",
