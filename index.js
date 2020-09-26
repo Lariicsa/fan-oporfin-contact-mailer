@@ -8,16 +8,19 @@ const notFoundHandler = require('./utils/middlewares/notFoundHandler.js')
 
 // body parser
 app.use(express.json());
-app.options('*', cors())
-contactsApi(app);
+//app.options('*', cors())
 
 
 //middleware for CORS
-// app.use(function (req, res, next) {
-// 	res.header("Access-Control-Allow-Origin", "https://oporfinlanding.netlify.app")
-// 	res.header("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT")
-// 	next()
-// })
+app.use(function (req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*")
+	res.header("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT")
+	next()
+})
+
+contactsApi(app);
+
+
 
 //catch 404 err
 app.use(notFoundHandler)
