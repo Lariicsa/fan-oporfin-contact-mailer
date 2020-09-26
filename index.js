@@ -10,6 +10,8 @@ const notFoundHandler = require('./utils/middlewares/notFoundHandler.js')
 app.use(express.json());
 //app.options('*', cors())
 
+contactsApi(app);
+
 
 //middleware for CORS
 app.use(function (req, res, next) {
@@ -17,9 +19,6 @@ app.use(function (req, res, next) {
 	res.header("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT")
 	next()
 })
-
-contactsApi(app);
-
 
 
 //catch 404 err
