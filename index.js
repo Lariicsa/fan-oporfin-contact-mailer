@@ -9,6 +9,7 @@ const notFoundHandler = require('./utils/middlewares/notFoundHandler.js')
 // body parser
 app.use(express.json());
 app.options('*', cors())
+app.use(allowCrossDomain)
 contactsApi(app);
 
 
