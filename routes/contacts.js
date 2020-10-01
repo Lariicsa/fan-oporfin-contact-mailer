@@ -47,9 +47,9 @@ function contactsApi(app) {
         <h1>${contact.contactname}</h1>
             <p style="font-size: 16px">Asunto: <strong>${contact.subject}</strong></p>
             <p style="font-size: 16px">e-Mail: <strong>${contact.email}</strong> </p>
-            <p style="font-size: 16px">teléfono: <strong>${contact.phone}</strong></p>
+            <p style="font-size: 16px">Teléfono: <strong>${contact.phone}</strong></p>
             <p style="font-size: 16px"><strong>Mensaje:</strong></p>
-            <p style="backgroun-color: #ffffff; padding: 6px; font-size: 16px">${contact.message}</p>
+            <p style="background-color: #ffffff; padding: 6px; font-size: 16px">${contact.message}</p>
         </div>
           `,
       });
