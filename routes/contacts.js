@@ -43,14 +43,13 @@ function contactsApi(app) {
         from: `Contacto de cliente <contacto@oportunidadesfinancieras.com.mx>`,
         to: process.env.SMTP_EMAIL,
         subject: "OPORFIN | Mensaje desde Landingpage",
-        html: `<div style="border: 1px solid grey">
+        html: `<div style="background-color: #f8f8fb; border: 1px solid grey; padding: 20px; border-radius: 6px">
         <h1>${contact.contactname}</h1>
             <p style="font-size: 16px">Asunto: <strong>${contact.subject}</strong></p>
             <p style="font-size: 16px">e-Mail: <strong>${contact.email}</strong> </p>
             <p style="font-size: 16px">teléfono: <strong>${contact.phone}</strong></p>
-            <p style="font-size: 16px">Mensaje:<br>
-            <hr style="width: 50%">
-             <strong>${contact.message}</strong></p>
+            <p style="font-size: 16px"><strong>Mensaje:</strong></p>
+            <p style="backgroun-color: #ffffff; padding: 6px; font-size: 16px">${contact.message}</p>
         </div>
           `,
       });
