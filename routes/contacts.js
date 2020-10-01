@@ -44,10 +44,12 @@ function contactsApi(app) {
         to: process.env.SMTP_EMAIL,
         subject: "OPORFIN | Mensaje desde Landingpage",
         html: `<h1>${contact.subject}</h1>
-            <p>Nombre: ${contact.contactname}</p>
-            <p>e-Mail: ${contact.email} </p>
-            <p>Mensaje: ${contact.message}</p>
-            <p>teléfono: ${contact.phone}</p>
+            <p>Nombre: <strong>${contact.contactname}</strong></p>
+            <p>e-Mail: <strong>${contact.email}</strong> </p>
+            <p>teléfono: <strong>${contact.phone}</strong></p>
+            <p>Mensaje:<br>
+            <hr>
+             <strong>${contact.message}</strong></p>
           `,
       });
 
@@ -56,7 +58,7 @@ function contactsApi(app) {
         message: 'Contact info Sent'
       });
     } catch (err) {
-      console.log('que error', err);
+      console.log('showed error', err);
       res.json({
         error: err
       });
