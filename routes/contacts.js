@@ -40,16 +40,18 @@ function contactsApi(app) {
       console.log('contact', contact);
 
       await transport.sendMail({
-        from: `Contacto OPORFIN <contacto@oportunidadesfinancieras.com.mx>`,
+        from: `Contacto de cliente <contacto@oportunidadesfinancieras.com.mx>`,
         to: process.env.SMTP_EMAIL,
         subject: "OPORFIN | Mensaje desde Landingpage",
-        html: `<h1>${contact.subject}</h1>
-            <p>Nombre: <strong>${contact.contactname}</strong></p>
-            <p>e-Mail: <strong>${contact.email}</strong> </p>
-            <p>teléfono: <strong>${contact.phone}</strong></p>
-            <p>Mensaje:<br>
-            <hr>
+        html: `<div style="border: 1px solid grey">
+        <h1>${contact.contactname}</h1>
+            <p style="font-size: 16px">Asunto: <strong>${contact.subject}</strong></p>
+            <p style="font-size: 16px">e-Mail: <strong>${contact.email}</strong> </p>
+            <p style="font-size: 16px">teléfono: <strong>${contact.phone}</strong></p>
+            <p style="font-size: 16px">Mensaje:<br>
+            <hr style="width: 50%">
              <strong>${contact.message}</strong></p>
+        </div>
           `,
       });
 
