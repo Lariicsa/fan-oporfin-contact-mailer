@@ -10,11 +10,25 @@ const validationHandler = require('../utils/middlewares/validationHandler')
 
 function contactsApi(app) {
   const router = express.Router();
-  app.use('/api/contacts', router);
+  app.use('/', router);
 
   const contactsService = new ContactsService();
 
   router.get('/', async function (req, res, next) {
+    try {
+
+      res.status(200)
+      res.send('<h2>OPORFIN API IS RUNNING</h2>')
+    } catch (err) {
+      res.json({
+        error: err
+      });
+      res.send('<h2>Something is Bad, check console</h2>')
+      next(err);
+    }
+  });
+
+  router.get('/api/contacts', async function (req, res, next) {
     const { tags } = req.query;
 
     try {
@@ -33,7 +47,7 @@ function contactsApi(app) {
   });
 
 
-  router.post('/', validationHandler(createContactSchema), async function (req, res, next) {
+  router.post('/api/contacts', validationHandler(createContactSchema), async function (req, res, next) {
     const { body: contact } = req;
     try {
       const createdContact = await contactsService.createContact({ contact });

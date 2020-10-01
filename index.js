@@ -35,6 +35,8 @@ app.use(logErrors);
 app.use(wrapErrors)
 app.use(errorHandler);
 
+
 app.listen(config.port, function () {
   console.log(`Listening http://localhost:${config.port}`);
+  
 });
