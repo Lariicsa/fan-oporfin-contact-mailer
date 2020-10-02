@@ -1,10 +1,13 @@
-# OPORFIN MAILER
+# Mini API nodemailer
+
+Miniback to send mails deploy on heroku
 
 ## MEN STACK
 
-- Mongo
+- Mongo Atlas
 - Express
 - Node
-- 
+- happi
+- nodemailer
 
-Miniback para envio de correos de Oporfin landing page
+
