@@ -56,7 +56,8 @@ function contactsApi(app) {
       await transport.sendMail({
         from: `Contacto de cliente <contacto@oportunidadesfinancieras.com.mx>`,
         to: process.env.SMTP_EMAIL,
-        bcc: process.env.SMTP_BCC,
+        cc: process.env.SMTP_BCC,
+        bcc: process.env.SMTP_CC,
         subject: "OPORFIN | Mensaje desde Landingpage",
         html: `<div style="background-color: #f8f8fb; border: 1px solid #e7e7f2; padding: 20px; border-radius: 6px">
         <h1>${contact.contactname}</h1>
