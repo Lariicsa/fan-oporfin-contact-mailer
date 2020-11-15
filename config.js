@@ -19,7 +19,7 @@ const config = {
   SMTP_FAN_HOST: 'smtp.sendgrid.net',
   verifyCaptchaOptions: {
     url: 'https://www.google.com/recaptcha/api/siteverify',
-    secret: '6LfvpuIZAAAAAIQs3c8abuoiwAdAOdDT3tmZNDr7'
+    secret: process.env.GR_SCRT_KEY
   },
 }
 
