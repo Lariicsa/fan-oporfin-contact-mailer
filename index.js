@@ -26,7 +26,6 @@ app.options('*', cors())
 app.use(allowCrossDomain)
 contactsApi(app);
 
-
 //catch 404 err
 app.use(notFoundHandler)
 
