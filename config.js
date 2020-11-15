@@ -1,24 +1,27 @@
+require('dotenv').config()
 const config = {
   dev: process.env.NODE_ENV !== 'production',
-  port: 3000,
+  port: process.env.PORT || 3000,
   dockerPort: 8080,
-  dbUser: 'oporfin_admin',
-  dbPassword: 'DlOWUHZQRp1fF19q',
-  dbHost: 'cluster0.pcwtw.mongodb.net',
-  dbName: 'mail_contacts',
-  SMTP_EMAIL: 'ppadilla@oportunidadesfinancieras.com.mx',
-  SMTP_BCC: 'larissa@fantasticocomic.com',
-  SMTP_PAZZ: '394fa02c628c38',
-  SMTP_FAN_USER: 'Suscripciones',
-  SMTP_FAN_PAZZ: 'AZRfkXX4yXhs',
-  SMTP_FAN_PORT: 465,
-  SMTP_FAN_SECURE: true,
-  SMTP_FAN_IGNORE_TLS: true,
+  dbUser: process.env.DB_USER,
+  dbPassword: process.env.DB_PASS,
+  dbHost: process.env.DB_HOST,
+  dbName: process.env.DB_NAME,
+  SMTP_EMAIL: process.env.SMTP_EMAIL,
+  SMTP_BCC: process.env.SMTP_BCC,
+  SMTP_PAZZ: process.env.SMTP_PAZZ,
+  SMTP_USER: process.env.SMTP_USER,
+  SMTP_FAN_USER: process.env.SMTP_FAN_USER,
+  SMTP_FAN_PAZZ: process.env.SMTP_FAN_PAZZ,
+  SMTP_FAN_PORT: process.env.SMTP_FAN_PORT,
+  SMTP_FAN_SECURE: process.env.SMTP_FAN_SECURE,
+  SMTP_FAN_IGNORE_TLS: process.env.SMTP_FAN_IGNORE_TLS,
   SMTP_FAN_HOST: 'smtp.sendgrid.net',
   verifyCaptchaOptions: {
     url: 'https://www.google.com/recaptcha/api/siteverify',
-    secret: '6LfvpuIZAAAAAIQs3c8abuoiwAdAOdDT3tmZNDr7'
+    secret: process.env.GR_SCRT_KEY
   },
 }
 
 module.exports = { config };
+
