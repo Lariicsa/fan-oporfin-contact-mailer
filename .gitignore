@@ -110,3 +110,7 @@ dist
 .vercel
 
 utilvercel.txt
+
+config.js
+
+arr/

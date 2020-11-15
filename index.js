@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 const app = express();
-const { config } = require('./config/index');
+const { config } = require('./config');
 const contactsApi = require('./routes/contacts.js');
 const { logErrors, errorHandler, wrapErrors } = require('./utils/middlewares/errorHandlers.js')
 const notFoundHandler = require('./utils/middlewares/notFoundHandler.js')
@@ -37,6 +37,6 @@ app.use(errorHandler);
 
 
 app.listen(config.port, function () {
-  console.log(`Listening http://localhost:${config.port}`);
+  console.log(`Listening http://localhost:${config.dockerPort}`);
   
 });
