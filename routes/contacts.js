@@ -4,9 +4,9 @@ const {
   createContactSchema
 } = require('../utils/schemas/contact')
 const transport = require("../utils/sendMail");
-const validationHandler = require('../utils/middlewares/validationHandler')
-const { config } = require('../config');
+const { config } = require('../config.js');
 const isHuman = require('../utils/middlewares/isHuman')
+const validationHandler = require('../utils/middlewares/validationHandler')
 
 function contactsApi(app) {
   const router = express.Router();
