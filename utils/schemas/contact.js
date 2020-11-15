@@ -13,7 +13,7 @@ const createContactSchema = {
   email: contactEmail.required(),
   phone: contactPhone,
   subject: contactSubject,
-  message: contactMessage,
+  message: contactMessage
 }
 
 module.exports = {

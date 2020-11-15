@@ -1,8 +1,8 @@
 const axios = require('axios')
-const { config } = require('../../config');
+const { config } = require('../../config/index');
 const formData = require('form-data')
-const RECAPTCHA_SERVER_KEY = config.verifyCaptchaOptions.secret
-const URL_RECAPTCHA = config.verifyCaptchaOptions.url
+const RECAPTCHA_SERVER_KEY = process.env.verifyCaptchaOptions.secret
+const URL_RECAPTCHA = process.env.verifyCaptchaOptions.url
 
 const isHuman = async function (req, res, next) {
   try {

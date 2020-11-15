@@ -7,22 +7,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ENV=dev nodemon --ignore 'node_modules/**' index.js",
+    "dev": "DEBUG=app:* nodemon index",
     "start": "NODE_ENV=production node index"
   },
   "keywords": [],
-  "author": "Lariicsa",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "@hapi/joi": "^17.1.1",
-    "async": "^3.2.0",
-    "axios": "^0.21.0",
-    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "form-data": "^3.0.0",
     "mongodb": "^3.5.9",
     "nodemailer": "^6.4.11"
   },
